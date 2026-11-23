@@ -2525,3 +2525,48 @@ button {
 .accessibility-icon:hover {
     opacity: 0.9;
 }
+
+
+/* ===== Background video halaman sambutan ===== */
+.page-shell {
+    position: relative;
+    isolation: isolate;
+    background: #071a33;
+}
+
+.page-shell .background-video {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+
+/* Lapisan gelap agar teks dan elemen halaman tetap terbaca */
+.page-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        rgba(4, 17, 35, 0.76) 0%,
+        rgba(4, 17, 35, 0.60) 48%,
+        rgba(4, 17, 35, 0.78) 100%
+    );
+    pointer-events: none;
+}
+
+/* Tekstur grid tetap berada di atas video dan di bawah konten */
+.page-shell::after {
+    z-index: 1;
+}
+
+/* Video menjadi latar utama, tanpa efek blob lama */
+.page-shell > .ambient {
+    display: none;
+}

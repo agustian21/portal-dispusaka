@@ -92,6 +92,10 @@
 
 <body data-page="index.html">
     <div class="page-shell">
+        <video class="background-video" autoplay muted loop playsinline preload="metadata"
+            aria-hidden="true" tabindex="-1">
+            <source src="{{ asset('assets/images/pusarda.mp4') }}" type="video/mp4">
+        </video>
         <div class="ambient ambient-a"></div>
         <div class="ambient ambient-b"></div>
         <header class="topbar">
