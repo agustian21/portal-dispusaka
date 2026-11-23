@@ -1,0 +1,1723 @@
+/* ============================================================
+   DISPUSAKA PPID
+   VISI & MISI
+   Modern public information direction page
+============================================================ */
+
+.vm-page {
+    --vm-text: #263b56;
+    --vm-muted: #6a7c92;
+    --vm-soft: #f6f9fd;
+    --vm-soft-blue: #eef5fc;
+    --vm-border: rgba(8, 42, 91, 0.1);
+
+    position: relative;
+    overflow: clip;
+    background: #ffffff;
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.vm-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 83% 15%,
+            rgba(243, 182, 31, 0.19),
+            transparent 23%),
+        radial-gradient(circle at 98% 82%,
+            rgba(255, 255, 255, 0.08),
+            transparent 24%),
+        linear-gradient(124deg,
+            #061d40 0%,
+            #082a5b 42%,
+            #0c3e7d 74%,
+            #155fb4 100%);
+}
+
+.vm-hero-pattern {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px);
+
+    background-size: 44px 44px;
+
+    mask-image: linear-gradient(90deg,
+            transparent 0%,
+            rgba(0, 0, 0, 0.7) 38%,
+            #000 100%);
+}
+
+.vm-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.vm-orb-one {
+    width: 270px;
+    height: 270px;
+    right: -105px;
+    top: -115px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vm-orb-two {
+    width: 170px;
+    height: 170px;
+    left: 43%;
+    bottom: -105px;
+
+    border: 1px solid rgba(243, 182, 31, 0.14);
+    background: rgba(243, 182, 31, 0.06);
+}
+
+.vm-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================================
+   BREADCRUMB
+============================================================ */
+
+.vm-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    padding-top: 27px;
+
+    color: rgba(232, 242, 254, 0.72);
+
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.vm-breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #ffffff;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.vm-breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.vm-breadcrumb a i {
+    color: var(--gold);
+}
+
+.vm-breadcrumb-separator {
+    color: rgba(255, 255, 255, 0.34);
+    font-size: 7px;
+}
+
+/* ============================================================
+   HERO GRID
+============================================================ */
+
+.vm-hero-grid {
+    min-height: 450px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(330px, 0.92fr);
+
+    align-items: center;
+
+    gap: 64px;
+
+    padding: 44px 0 82px;
+}
+
+.vm-hero-copy {
+    position: relative;
+    z-index: 3;
+}
+
+.vm-hero-eyebrow {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 7px 13px 7px 8px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.075);
+
+    backdrop-filter: blur(12px);
+
+    color: #e4effc;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.vm-hero-eyebrow-icon {
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(243, 182, 31, 0.16);
+
+    color: var(--gold);
+}
+
+.vm-hero-copy h1 {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+}
+
+.vm-hero-copy h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.vm-hero-description {
+    max-width: 625px;
+
+    margin: 21px 0 0;
+
+    color: #d6e5f6;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   HERO ACTIONS
+============================================================ */
+
+.vm-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 21px;
+
+    margin-top: 27px;
+}
+
+.vm-primary-button {
+    min-height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0 18px;
+
+    border-radius: 12px;
+
+    background: var(--gold);
+    color: #17283c;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+
+    font-size: 11px;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.vm-primary-button:hover {
+    transform: translateY(-2px);
+
+    background: #ffc938;
+
+    box-shadow:
+        0 16px 34px rgba(0, 0, 0, 0.17),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.vm-primary-button i {
+    font-size: 9px;
+}
+
+.vm-hero-points {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 8px 17px;
+}
+
+.vm-hero-points span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #dbe9f8;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.vm-hero-points i {
+    color: var(--gold);
+}
+
+/* ============================================================
+   HERO VISUAL
+============================================================ */
+
+.vm-hero-visual {
+    position: relative;
+
+    min-height: 335px;
+
+    display: grid;
+    place-items: center;
+}
+
+.vm-visual-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.vm-visual-ring-one {
+    width: 325px;
+    height: 325px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vm-visual-ring-two {
+    width: 248px;
+    height: 248px;
+
+    border: 1px solid rgba(243, 182, 31, 0.14);
+}
+
+/* Main visual card */
+
+.vm-visual-card {
+    position: relative;
+    z-index: 3;
+
+    width: min(310px, 84%);
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+
+    border-radius: 27px;
+
+    background: linear-gradient(145deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.055));
+
+    box-shadow: 0 28px 65px rgba(1, 17, 39, 0.28);
+
+    backdrop-filter: blur(18px);
+}
+
+.vm-visual-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 135px;
+    height: 135px;
+
+    right: -55px;
+    top: -55px;
+
+    border-radius: 50%;
+
+    background: rgba(243, 182, 31, 0.14);
+}
+
+.vm-visual-card-head {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vm-visual-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #dceafa;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.vm-visual-status>span {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow:
+        0 0 0 5px rgba(243, 182, 31, 0.11);
+}
+
+.vm-visual-card-head>i {
+    position: relative;
+    z-index: 2;
+
+    color: var(--gold);
+
+    font-size: 17px;
+}
+
+/* Focus content */
+
+.vm-visual-main {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 46px 1fr;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 41px;
+}
+
+.vm-visual-main-icon {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.11);
+
+    color: var(--gold);
+
+    font-size: 15px;
+}
+
+.vm-visual-main small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #bcd0e7;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.vm-visual-main strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+/* Direction route */
+
+.vm-visual-route {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns:
+        29px minmax(25px, 1fr) 29px minmax(25px, 1fr) 29px;
+
+    align-items: center;
+
+    margin-top: 29px;
+}
+
+.vm-visual-route>span {
+    width: 29px;
+    height: 29px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    border: 1px solid rgba(255, 255, 255, 0.13);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #bcd0e7;
+
+    font-size: 9px;
+}
+
+.vm-visual-route>span.is-active {
+    border-color: rgba(243, 182, 31, 0.22);
+
+    background: rgba(243, 182, 31, 0.15);
+
+    color: var(--gold);
+}
+
+.vm-visual-route>div {
+    height: 1px;
+
+    background: linear-gradient(90deg,
+            rgba(243, 182, 31, 0.45),
+            rgba(255, 255, 255, 0.11));
+}
+
+.vm-visual-footer {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+
+    margin-top: 24px;
+}
+
+.vm-visual-footer strong {
+    color: var(--gold);
+
+    font-size: 13px;
+}
+
+.vm-visual-footer small {
+    color: #c5d7eb;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+/* Floating cards */
+
+.vm-floating-card {
+    position: absolute;
+    z-index: 6;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 148px;
+
+    padding: 10px 12px;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    color: var(--navy);
+
+    box-shadow: 0 15px 35px rgba(3, 25, 55, 0.19);
+}
+
+.vm-floating-card>i {
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+    place-items: center;
+
+    flex: 0 0 auto;
+
+    border-radius: 9px;
+
+    background: var(--surface-2);
+
+    color: var(--blue);
+
+    font-size: 11px;
+}
+
+.vm-floating-card small {
+    display: block;
+
+    margin-bottom: 1px;
+
+    color: #7c8da2;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.vm-floating-card strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 9px;
+}
+
+.vm-floating-card-one {
+    left: -2px;
+    top: 60px;
+}
+
+.vm-floating-card-two {
+    right: -4px;
+    bottom: 46px;
+}
+
+/* ============================================================
+   MAIN CONTENT
+============================================================ */
+
+.vm-content-section {
+    position: relative;
+
+    padding: 90px 0 85px;
+
+    background:
+        radial-gradient(circle at 95% 10%,
+            rgba(21, 95, 180, 0.045),
+            transparent 24%),
+        #ffffff;
+
+    scroll-margin-top: 90px;
+}
+
+.vm-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 28px;
+
+    margin-bottom: 31px;
+}
+
+.vm-section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.vm-section-eyebrow i {
+    color: var(--gold);
+}
+
+.vm-section-heading h2 {
+    max-width: 680px;
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: clamp(29px, 3vw, 41px);
+    line-height: 1.16;
+
+    letter-spacing: -0.025em;
+}
+
+.vm-section-heading>div:first-child>p {
+    max-width: 620px;
+
+    margin: 10px 0 0;
+
+    color: var(--vm-muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Updated date */
+
+.vm-update-badge {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 12px;
+
+    border: 1px solid var(--line);
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 22px rgba(8, 42, 91, 0.045);
+}
+
+.vm-update-icon {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--surface-2);
+
+    color: var(--blue);
+
+    font-size: 11px;
+}
+
+.vm-update-badge small,
+.vm-update-badge strong {
+    display: block;
+}
+
+.vm-update-badge small {
+    color: #8898aa;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.vm-update-badge strong {
+    margin-top: 1px;
+
+    color: var(--navy);
+
+    font-size: 9px;
+}
+
+/* ============================================================
+   VISI + MISI GRID
+============================================================ */
+
+.vm-main-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(350px, 0.9fr) minmax(450px, 1.1fr);
+
+    align-items: start;
+
+    gap: 24px;
+}
+
+/* ============================================================
+   VISI
+============================================================ */
+
+.vm-vision-card {
+    position: relative;
+
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    padding: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 100% 0,
+            rgba(243, 182, 31, 0.2),
+            transparent 32%),
+        linear-gradient(145deg,
+            #061f47 0%,
+            #082f66 58%,
+            #0d4385 100%);
+
+    box-shadow: 0 18px 44px rgba(8, 42, 91, 0.14);
+}
+
+.vm-card-decoration {
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -105px;
+    bottom: -115px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.vm-vision-header {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.vm-card-icon {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: var(--gold);
+
+    font-size: 16px;
+}
+
+.vm-card-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--gold);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.vm-vision-header h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 18px;
+}
+
+.vm-vision-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 25px 0 20px;
+}
+
+.vm-quote-icon {
+    margin-bottom: 17px;
+
+    color: rgba(243, 182, 31, 0.5);
+
+    font-size: 27px;
+}
+
+.vm-vision-content p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(19px, 2vw, 25px);
+    line-height: 1.7;
+    font-weight: 650;
+
+    letter-spacing: -0.015em;
+}
+
+.vm-vision-content .vm-content-placeholder {
+    color: #cbdbee;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.vm-vision-footer {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vm-vision-footer span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #c8d8eb;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.vm-vision-footer i {
+    color: var(--gold);
+}
+
+/* ============================================================
+   MISI
+============================================================ */
+
+.vm-mission-card {
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 24px;
+
+    background: #ffffff;
+
+    box-shadow: 0 12px 35px rgba(8, 42, 91, 0.055);
+}
+
+.vm-mission-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 25px 27px;
+
+    border-bottom: 1px solid var(--line);
+
+    background:
+        radial-gradient(circle at 95% 0,
+            rgba(243, 182, 31, 0.07),
+            transparent 30%),
+        linear-gradient(180deg,
+            #fbfdff 0%,
+            #ffffff 100%);
+}
+
+.vm-mission-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.vm-card-icon-light {
+    background: var(--surface-2);
+    color: var(--navy);
+}
+
+.vm-mission-header h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 18px;
+}
+
+.vm-mission-count {
+    flex: 0 0 auto;
+
+    padding: 7px 10px;
+
+    border: 1px solid var(--line);
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    color: #718298;
+
+    font-size: 8px;
+    font-weight: 800;
+}
+
+/* Mission list */
+
+.vm-mission-list {
+    display: grid;
+
+    gap: 0;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.vm-mission-list>li {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        46px minmax(0, 1fr) 32px;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-height: 116px;
+
+    padding: 20px 25px;
+
+    border-bottom: 1px solid rgba(8, 42, 91, 0.07);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.vm-mission-list>li:last-child {
+    border-bottom: 0;
+}
+
+.vm-mission-list>li:hover {
+    background: #f8fbff;
+}
+
+.vm-mission-number {
+    width: 46px;
+    height: 46px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: var(--surface-2);
+
+    color: var(--blue);
+
+    font-size: 10px;
+    font-weight: 800;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.vm-mission-list>li:hover .vm-mission-number {
+    background: var(--navy);
+    color: var(--gold);
+}
+
+.vm-mission-text {
+    min-width: 0;
+}
+
+.vm-mission-text>span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--blue);
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.vm-mission-text p {
+    margin: 0;
+
+    color: #40556f;
+
+    font-size: 13px;
+    line-height: 1.75;
+    font-weight: 600;
+}
+
+.vm-mission-check {
+    width: 30px;
+    height: 30px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: #eef8f2;
+
+    color: var(--green);
+
+    font-size: 9px;
+}
+
+/* Mission empty */
+
+.vm-mission-empty {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    min-height: 220px;
+
+    margin: 25px;
+    padding: 25px;
+
+    border: 1px dashed #cddbeb;
+    border-radius: 17px;
+
+    background: #f8fbff;
+}
+
+.vm-mission-empty>span {
+    width: 52px;
+    height: 52px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+
+    background: var(--surface-2);
+
+    color: var(--navy);
+
+    font-size: 18px;
+}
+
+.vm-mission-empty strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 13px;
+}
+
+.vm-mission-empty p {
+    margin: 5px 0 0;
+
+    color: var(--vm-muted);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+/* ============================================================
+   PRINCIPLE STRIP
+============================================================ */
+
+.vm-principle-strip {
+    display: grid;
+
+    grid-template-columns:
+        minmax(240px, 1.2fr) repeat(3, minmax(160px, 0.7fr));
+
+    align-items: center;
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 9px 28px rgba(8, 42, 91, 0.045);
+}
+
+.vm-principle-intro,
+.vm-principle-item {
+    min-height: 105px;
+
+    padding: 20px 22px;
+}
+
+.vm-principle-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: var(--surface);
+}
+
+.vm-principle-intro>span {
+    color: var(--blue);
+
+    font-size: 7px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.vm-principle-intro>strong {
+    max-width: 315px;
+
+    margin-top: 5px;
+
+    color: var(--navy);
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.vm-principle-item {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    border-left: 1px solid var(--line);
+}
+
+.vm-principle-item>span {
+    width: 37px;
+    height: 37px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 11px;
+
+    background: var(--surface-2);
+
+    color: var(--blue);
+
+    font-size: 12px;
+}
+
+.vm-principle-item strong,
+.vm-principle-item small {
+    display: block;
+}
+
+.vm-principle-item strong {
+    color: var(--navy);
+
+    font-size: 10px;
+}
+
+.vm-principle-item small {
+    margin-top: 3px;
+
+    color: var(--vm-muted);
+
+    font-size: 8px;
+    line-height: 1.45;
+}
+
+/* ============================================================
+   SERVER EMPTY STATE
+============================================================ */
+
+.vm-empty-state {
+    display: flex;
+    align-items: center;
+
+    gap: 21px;
+
+    padding: 34px;
+
+    border: 1px dashed #cbd9e9;
+    border-radius: 21px;
+
+    background:
+        radial-gradient(circle at 95% 0,
+            rgba(21, 95, 180, 0.05),
+            transparent 28%),
+        #f9fbfe;
+}
+
+.vm-empty-icon {
+    width: 64px;
+    height: 64px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    color: var(--navy);
+
+    font-size: 23px;
+
+    box-shadow: var(--shadow-soft);
+}
+
+.vm-empty-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--blue);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.vm-empty-state h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 18px;
+}
+
+.vm-empty-state p {
+    max-width: 620px;
+
+    margin: 7px 0 0;
+
+    color: var(--vm-muted);
+
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================ */
+
+.vm-page a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1050px) {
+
+    .vm-hero-grid {
+        grid-template-columns:
+            minmax(0, 1fr) 315px;
+
+        gap: 35px;
+    }
+
+    .vm-floating-card-one {
+        left: -10px;
+    }
+
+    .vm-floating-card-two {
+        right: -8px;
+    }
+
+    .vm-main-grid {
+        grid-template-columns:
+            minmax(270px, 0.75fr) minmax(0, 1.25fr);
+    }
+
+    .vm-principle-strip {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .vm-principle-intro {
+        grid-column: 1 / -1;
+
+        min-height: auto;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .vm-principle-item:first-of-type {
+        border-left: 0;
+    }
+}
+
+/* ============================================================
+   SMALL TABLET
+============================================================ */
+
+@media (max-width: 880px) {
+
+    .vm-hero-grid {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 48px 0 75px;
+    }
+
+    .vm-hero-copy {
+        max-width: 720px;
+    }
+
+    .vm-hero-visual {
+        display: none;
+    }
+
+    .vm-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vm-vision-card {
+        min-height: 360px;
+    }
+
+    .vm-section-heading {
+        align-items: flex-start;
+    }
+}
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+
+    .vm-breadcrumb {
+        padding-top: 20px;
+
+        font-size: 9px;
+    }
+
+    .vm-hero-grid {
+        padding: 40px 0 65px;
+    }
+
+    .vm-hero-copy h1 {
+        font-size: clamp(37px, 11vw, 49px);
+    }
+
+    .vm-hero-description {
+        font-size: 12px;
+    }
+
+    .vm-hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 17px;
+    }
+
+    .vm-primary-button {
+        width: 100%;
+
+        min-height: 50px;
+    }
+
+    .vm-hero-points {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .vm-content-section {
+        padding: 67px 0 62px;
+    }
+
+    .vm-section-heading {
+        flex-direction: column;
+
+        margin-bottom: 24px;
+    }
+
+    .vm-update-badge {
+        width: 100%;
+    }
+
+    .vm-vision-card {
+        min-height: 340px;
+
+        padding: 25px 22px;
+
+        border-radius: 20px;
+    }
+
+    .vm-vision-content {
+        padding: 31px 0;
+    }
+
+    .vm-vision-content p {
+        font-size: 19px;
+    }
+
+    .vm-mission-card {
+        border-radius: 20px;
+    }
+
+    .vm-mission-header {
+        align-items: flex-start;
+
+        padding: 21px;
+
+        flex-direction: column;
+    }
+
+    .vm-mission-count {
+        margin-left: 59px;
+    }
+
+    .vm-mission-list>li {
+        grid-template-columns:
+            40px minmax(0, 1fr);
+        gap: 13px;
+        min-height: 0;
+        padding: 19px;
+    }
+
+    .vm-mission-number {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+    }
+
+    .vm-mission-check {
+        display: none;
+    }
+
+    .vm-mission-text p {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+    .vm-principle-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .vm-principle-intro {
+        grid-column: auto;
+    }
+
+    .vm-principle-item {
+        min-height: 82px;
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+
+    .vm-empty-state {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 25px;
+    }
+}
+
+/* ============================================================
+   EXTRA SMALL
+============================================================ */
+
+@media (max-width: 480px) {
+
+    .vm-hero-eyebrow {
+        font-size: 8px;
+    }
+
+    .vm-hero-copy h1 {
+        font-size: 37px;
+    }
+
+    .vm-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .vm-vision-card {
+        min-height: auto;
+    }
+
+    .vm-vision-content p {
+        font-size: 17px;
+    }
+
+    .vm-mission-heading {
+        align-items: flex-start;
+    }
+
+    .vm-mission-count {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .vm-mission-list>li {
+        grid-template-columns: 36px minmax(0, 1fr);
+        padding: 17px 15px;
+    }
+
+    .vm-mission-number {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vm-page *,
+    .vm-page *::before,
+    .vm-page *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .vm-primary-button:hover {
+        transform: none;
+    }
+}
+
+/* ============================================================
+   TUGAS PPID
+   Tambahan untuk halaman Tugas dan Tanggung Jawab
+============================================================ */
+.vm-task-primary-list {
+    width: 100%;
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.vm-task-primary-item {
+    display: grid;
+    grid-template-columns:
+        36px minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+}
+
+.vm-task-primary-number {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.vm-task-primary-text {
+    margin: 0;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.75;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+}
+
+.vm-task-primary-item:hover .vm-task-primary-number {
+    background: rgba(243, 182, 31, 0.16);
+}
+
+/* ============================================================
+   MOBILE TASK LIST
+============================================================ */
+
+@media (max-width: 700px) {
+    .vm-task-primary-list {
+        gap: 15px;
+    }
+
+    .vm-task-primary-item {
+        grid-template-columns:
+            33px minmax(0, 1fr);
+        gap: 11px;
+    }
+
+    .vm-task-primary-number {
+        width: 33px;
+        height: 33px;
+        border-radius: 10px;
+        font-size: 8px;
+    }
+
+    .vm-task-primary-text {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+}

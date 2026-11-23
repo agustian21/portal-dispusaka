@@ -1,0 +1,1877 @@
+/* ============================================================
+   DISPUSAKA PPID
+   ALAMAT INSTANSI
+   Modern contact and location page
+============================================================ */
+
+.address-page {
+    --address-text: #263b56;
+    --address-muted: #6a7c92;
+    --address-soft: #f6f9fd;
+    --address-soft-blue: #eef5fc;
+    --address-border: rgba(8, 42, 91, 0.1);
+
+    position: relative;
+    overflow: clip;
+    background: #ffffff;
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+
+.address-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 82% 15%,
+            rgba(243, 182, 31, 0.2),
+            transparent 23%),
+        radial-gradient(circle at 96% 82%,
+            rgba(255, 255, 255, 0.09),
+            transparent 25%),
+        linear-gradient(124deg,
+            #061d40 0%,
+            #082a5b 42%,
+            #0c3e7d 74%,
+            #155fb4 100%);
+}
+
+.address-hero-pattern {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.55;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px);
+
+    background-size: 44px 44px;
+
+    mask-image: linear-gradient(90deg,
+            transparent 0%,
+            rgba(0, 0, 0, 0.7) 38%,
+            #000 100%);
+}
+
+.address-hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.address-hero-orb-one {
+    width: 280px;
+    height: 280px;
+    right: -110px;
+    top: -120px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.address-hero-orb-two {
+    width: 175px;
+    height: 175px;
+    left: 44%;
+    bottom: -110px;
+
+    border: 1px solid rgba(243, 182, 31, 0.14);
+    background: rgba(243, 182, 31, 0.06);
+}
+
+.address-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================================
+   BREADCRUMB
+============================================================ */
+
+.address-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+
+    padding-top: 27px;
+
+    color: rgba(232, 242, 254, 0.72);
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.address-breadcrumb a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #ffffff;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.address-breadcrumb a:hover {
+    color: var(--gold);
+}
+
+.address-breadcrumb a i {
+    color: var(--gold);
+}
+
+.address-breadcrumb-separator {
+    color: rgba(255, 255, 255, 0.34);
+    font-size: 7px;
+}
+
+/* ============================================================
+   HERO LAYOUT
+============================================================ */
+
+.address-hero-grid {
+    min-height: 475px;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.08fr) minmax(340px, 0.92fr);
+
+    align-items: center;
+
+    gap: 64px;
+
+    padding: 46px 0 84px;
+}
+
+.address-hero-copy {
+    position: relative;
+    z-index: 3;
+}
+
+.address-eyebrow {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 7px 13px 7px 8px;
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.075);
+
+    backdrop-filter: blur(12px);
+
+    color: #e4effc;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.address-eyebrow-icon {
+    width: 28px;
+    height: 28px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(243, 182, 31, 0.16);
+
+    color: var(--gold);
+}
+
+.address-hero-copy h1 {
+    max-width: 720px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(40px, 5vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    font-weight: 800;
+}
+
+.address-hero-copy h1 span {
+    display: block;
+    color: var(--gold);
+}
+
+.address-hero-description {
+    max-width: 630px;
+
+    margin: 21px 0 0;
+
+    color: #d6e5f6;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ============================================================
+   HERO ACTIONS
+============================================================ */
+
+.address-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 11px;
+
+    margin-top: 29px;
+}
+
+.address-button {
+    min-height: 48px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 0 18px;
+
+    border: 1px solid transparent;
+    border-radius: 12px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.address-button:hover {
+    transform: translateY(-2px);
+}
+
+.address-button-primary {
+    background: var(--gold);
+    color: #17283c;
+
+    box-shadow:
+        0 12px 28px rgba(0, 0, 0, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+.address-button-primary:hover {
+    background: #ffc938;
+}
+
+.address-button-secondary {
+    border-color: rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.075);
+
+    color: #ffffff;
+
+    backdrop-filter: blur(10px);
+}
+
+.address-button-secondary:hover {
+    border-color: #ffffff;
+
+    background: #ffffff;
+
+    color: var(--navy);
+}
+
+.address-hero-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 9px 18px;
+
+    margin-top: 22px;
+}
+
+.address-hero-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #c9daee;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.address-hero-meta i {
+    color: var(--gold);
+}
+
+/* ============================================================
+   HERO VISUAL
+============================================================ */
+
+.address-hero-visual {
+    position: relative;
+
+    min-height: 350px;
+
+    display: grid;
+    place-items: center;
+}
+
+.address-visual-ring {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.address-visual-ring-one {
+    width: 340px;
+    height: 340px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.address-visual-ring-two {
+    width: 255px;
+    height: 255px;
+
+    border: 1px solid rgba(243, 182, 31, 0.15);
+}
+
+/* Main map style visual */
+
+.address-location-visual {
+    position: relative;
+    z-index: 3;
+
+    width: min(320px, 85%);
+
+    padding: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 27px;
+
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px),
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.055));
+
+    background-size:
+        25px 25px,
+        25px 25px,
+        auto;
+
+    box-shadow: 0 28px 65px rgba(1, 17, 39, 0.28);
+
+    backdrop-filter: blur(18px);
+}
+
+.address-location-visual::after {
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    right: -60px;
+    top: -55px;
+
+    border-radius: 50%;
+
+    background: rgba(243, 182, 31, 0.14);
+}
+
+.address-location-visual-head {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #dceafa;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.address-location-visual-head>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.address-location-visual-head>i {
+    color: var(--gold);
+    font-size: 16px;
+}
+
+.address-status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    box-shadow: 0 0 0 5px rgba(243, 182, 31, 0.11);
+}
+
+/* Pin */
+
+.address-location-pin-wrap {
+    position: relative;
+
+    min-height: 135px;
+
+    display: grid;
+    place-items: center;
+}
+
+.address-location-radar {
+    position: absolute;
+
+    width: 106px;
+    height: 106px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(243, 182, 31, 0.2);
+
+    box-shadow:
+        0 0 0 24px rgba(243, 182, 31, 0.035),
+        0 0 0 48px rgba(255, 255, 255, 0.018);
+}
+
+.address-location-pin {
+    position: relative;
+    z-index: 2;
+
+    width: 56px;
+    height: 56px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 18px;
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    font-size: 22px;
+
+    box-shadow:
+        0 15px 32px rgba(0, 0, 0, 0.2),
+        0 0 0 8px rgba(243, 182, 31, 0.11);
+}
+
+.address-location-visual-copy {
+    position: relative;
+    z-index: 2;
+}
+
+.address-location-visual-copy small {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #aebfd5;
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.address-location-visual-copy strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    line-height: 1.6;
+    font-weight: 700;
+
+    white-space: pre-line;
+}
+
+.address-location-visual-footer {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.address-location-visual-footer span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #bfd0e5;
+
+    font-size: 7px;
+    font-weight: 700;
+}
+
+.address-location-visual-footer i {
+    color: var(--gold);
+}
+
+/* Floating */
+
+.address-floating-card {
+    position: absolute;
+    z-index: 6;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 150px;
+
+    padding: 10px 12px;
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    color: var(--navy);
+
+    box-shadow: 0 15px 35px rgba(3, 25, 55, 0.19);
+}
+
+.address-floating-card-one {
+    left: -4px;
+    top: 61px;
+}
+
+.address-floating-card-two {
+    right: -7px;
+    bottom: 46px;
+}
+
+.address-floating-icon {
+    width: 32px;
+    height: 32px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 9px;
+
+    background: var(--surface-2);
+
+    color: var(--blue);
+
+    font-size: 11px;
+}
+
+.address-floating-card small {
+    display: block;
+
+    margin-bottom: 1px;
+
+    color: #7c8da2;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.address-floating-card strong {
+    display: block;
+
+    color: var(--navy);
+
+    font-size: 9px;
+}
+
+/* ============================================================
+   CONTENT
+============================================================ */
+
+.address-content-section {
+    position: relative;
+
+    padding: 90px 0 80px;
+
+    background:
+        radial-gradient(circle at 95% 8%,
+            rgba(21, 95, 180, 0.045),
+            transparent 23%),
+        #ffffff;
+
+    scroll-margin-top: 95px;
+}
+
+.address-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 28px;
+
+    margin-bottom: 31px;
+}
+
+.address-section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.address-section-eyebrow i {
+    color: var(--gold);
+}
+
+.address-section-heading h2 {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: clamp(29px, 3vw, 41px);
+    line-height: 1.16;
+    letter-spacing: -0.025em;
+}
+
+.address-section-heading>div:first-child>p {
+    max-width: 625px;
+
+    margin: 10px 0 0;
+
+    color: var(--address-muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* Update badge */
+
+.address-update-badge {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px 12px;
+
+    border: 1px solid var(--line);
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    box-shadow: 0 8px 22px rgba(8, 42, 91, 0.045);
+}
+
+.address-update-icon {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 10px;
+
+    background: var(--surface-2);
+
+    color: var(--blue);
+
+    font-size: 11px;
+}
+
+.address-update-badge small,
+.address-update-badge strong {
+    display: block;
+}
+
+.address-update-badge small {
+    color: #8898aa;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.address-update-badge strong {
+    margin-top: 1px;
+
+    color: var(--navy);
+
+    font-size: 9px;
+}
+
+/* ============================================================
+   MAIN GRID
+============================================================ */
+
+.address-main-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.18fr) minmax(310px, 0.82fr);
+
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+/* Main location card */
+
+.address-main-card {
+    position: relative;
+
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 100% 0,
+            rgba(243, 182, 31, 0.2),
+            transparent 31%),
+        linear-gradient(145deg,
+            #061f47 0%,
+            #082f66 58%,
+            #0d4385 100%);
+
+    box-shadow: 0 18px 44px rgba(8, 42, 91, 0.14);
+}
+
+.address-main-decoration {
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    right: -110px;
+    bottom: -120px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 50%;
+}
+
+.address-main-card-header {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.address-main-card-icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: var(--gold);
+
+    font-size: 17px;
+}
+
+.address-card-label {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: var(--gold);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.address-main-card-header h3 {
+    margin: 0;
+
+    max-width: 500px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.address-main-card-body {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 25px 0 20px;
+}
+
+.address-field-label {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #afc4dc;
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.address-location-text {
+    max-width: 650px;
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(19px, 2.3vw, 27px);
+    line-height: 1.4;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+}
+
+.address-information-empty {
+    margin: 0;
+
+    color: #c9daee;
+
+    font-size: 14px;
+}
+
+.address-main-card-footer {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.11);
+}
+
+.address-direction-button {
+    min-height: 48px;
+    margin-top: 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.075);
+
+    color: #ffffff;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.address-direction-button>span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.address-direction-button span i {
+    color: var(--gold);
+}
+
+.address-direction-button:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.address-map-unavailable {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #bdcee1;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+/* ============================================================
+   CONTACT COLUMN
+============================================================ */
+
+.address-contact-column {
+    display: grid;
+
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 13px;
+}
+
+.address-contact-card {
+    display: grid;
+
+    grid-template-columns:
+        51px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-height: 126px;
+
+    padding: 21px;
+
+    border: 1px solid var(--line);
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 9px 25px rgba(8, 42, 91, 0.045);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.address-contact-card:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(21, 95, 180, 0.15);
+
+    box-shadow: 0 15px 35px rgba(8, 42, 91, 0.09);
+}
+
+.address-contact-icon {
+    width: 51px;
+    height: 51px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 15px;
+
+    background: var(--surface-2);
+
+    color: var(--navy);
+
+    font-size: 17px;
+}
+
+.address-contact-content {
+    min-width: 0;
+}
+
+.address-contact-content>span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: var(--blue);
+
+    font-size: 7px;
+    font-weight: 800;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+.address-contact-content strong {
+    display: block;
+
+    overflow-wrap: anywhere;
+
+    color: var(--navy);
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.address-contact-content strong.is-muted {
+    color: #8291a3;
+    font-weight: 650;
+}
+
+.address-contact-content a {
+    width: fit-content;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    margin-top: 7px;
+
+    color: var(--blue);
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.address-contact-content a i {
+    font-size: 7px;
+
+    transition: transform 0.2s ease;
+}
+
+.address-contact-content a:hover i {
+    transform: translateX(3px);
+}
+
+.address-contact-content p {
+    margin: 4px 0 0;
+
+    color: var(--address-muted);
+
+    font-size: 8px;
+    line-height: 1.5;
+}
+
+.address-identity-card {
+    background:
+        radial-gradient(circle at 100% 0,
+            rgba(243, 182, 31, 0.065),
+            transparent 30%),
+        #ffffff;
+}
+
+/* ============================================================
+   CONNECT STRIP
+============================================================ */
+
+.address-connect-strip {
+    display: grid;
+
+    grid-template-columns:
+        minmax(225px, 1.15fr) repeat(3, minmax(180px, 0.85fr));
+
+    margin-top: 20px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--line);
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow: 0 9px 28px rgba(8, 42, 91, 0.045);
+}
+
+.address-connect-intro {
+    min-height: 112px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 21px 22px;
+
+    background: var(--surface);
+}
+
+.address-connect-intro span {
+    color: var(--blue);
+
+    font-size: 7px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.address-connect-intro strong {
+    max-width: 290px;
+
+    margin-top: 5px;
+
+    color: var(--navy);
+
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.address-connect-item {
+    position: relative;
+
+    min-height: 112px;
+
+    display: grid;
+
+    grid-template-columns:
+        39px minmax(0, 1fr) auto;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 18px;
+
+    border-left: 1px solid var(--line);
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.address-connect-item:hover {
+    background: #f8fbff;
+}
+
+.address-connect-icon {
+    width: 39px;
+    height: 39px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: var(--surface-2);
+
+    color: var(--blue);
+
+    font-size: 13px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.address-connect-item:hover .address-connect-icon {
+    background: var(--navy);
+    color: var(--gold);
+}
+
+.address-connect-item strong,
+.address-connect-item small {
+    display: block;
+}
+
+.address-connect-item strong {
+    color: var(--navy);
+
+    font-size: 10px;
+}
+
+.address-connect-item small {
+    margin-top: 3px;
+
+    color: var(--address-muted);
+
+    font-size: 8px;
+    line-height: 1.4;
+}
+
+.address-connect-arrow {
+    color: #a1afc0;
+    font-size: 8px;
+}
+
+.address-connect-placeholder {
+    min-height: 112px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 20px;
+
+    border-left: 1px solid var(--line);
+
+    color: var(--address-muted);
+
+    font-size: 9px;
+}
+
+.address-connect-placeholder i {
+    color: var(--blue);
+}
+
+/* ============================================================
+   EMPTY STATE
+============================================================ */
+
+.address-empty-state {
+    display: flex;
+    align-items: center;
+
+    gap: 21px;
+
+    padding: 36px;
+
+    border: 1px dashed #cbd9e9;
+    border-radius: 21px;
+
+    background:
+        radial-gradient(circle at 95% 0,
+            rgba(21, 95, 180, 0.05),
+            transparent 28%),
+        #f9fbfe;
+}
+
+.address-empty-icon {
+    width: 66px;
+    height: 66px;
+
+    flex: 0 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 19px;
+
+    background: #ffffff;
+
+    color: var(--navy);
+
+    font-size: 24px;
+
+    box-shadow: var(--shadow-soft);
+}
+
+.address-empty-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--blue);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.address-empty-state h3 {
+    margin: 0;
+
+    color: var(--navy);
+
+    font-size: 18px;
+}
+
+.address-empty-state p {
+    max-width: 620px;
+
+    margin: 7px 0 0;
+
+    color: var(--address-muted);
+
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   CLOSING CTA
+============================================================ */
+
+.address-closing-section {
+    padding: 8px 0 80px;
+
+    background: #ffffff;
+}
+
+.address-closing-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    overflow: hidden;
+
+    padding: 40px 42px;
+
+    border-radius: 25px;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(circle at 83% 15%,
+            rgba(243, 182, 31, 0.2),
+            transparent 24%),
+        linear-gradient(120deg,
+            #061f47,
+            #0b3979);
+}
+
+.address-closing-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    right: -90px;
+    bottom: -150px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.address-closing-copy,
+.address-closing-actions {
+    position: relative;
+    z-index: 2;
+}
+
+.address-closing-copy>span {
+    color: var(--gold);
+
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.address-closing-copy h2 {
+    max-width: 610px;
+
+    margin: 7px 0 0;
+
+    color: #ffffff;
+
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.address-closing-copy p {
+    max-width: 570px;
+
+    margin: 9px 0 0;
+
+    color: #c9d9eb;
+
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.address-closing-actions {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 9px;
+}
+
+.address-button-on-dark {
+    border-color: rgba(255, 255, 255, 0.18);
+
+    background: rgba(255, 255, 255, 0.07);
+
+    color: #ffffff;
+}
+
+.address-button-on-dark:hover {
+    background: #ffffff;
+    color: var(--navy);
+}
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================ */
+
+.address-page a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media (max-width: 1050px) {
+    .address-hero-grid {
+        grid-template-columns:
+            minmax(0, 1fr) 320px;
+
+        gap: 35px;
+    }
+
+    .address-floating-card-one {
+        left: -12px;
+    }
+
+    .address-floating-card-two {
+        right: -10px;
+    }
+
+    .address-main-grid {
+        grid-template-columns:
+            minmax(0, 1.08fr) minmax(280px, 0.92fr);
+    }
+
+    .address-connect-strip {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .address-connect-intro {
+        grid-column: 1 / -1;
+
+        min-height: auto;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .address-connect-item:first-of-type {
+        border-left: 0;
+    }
+}
+
+/* ============================================================
+   SMALL TABLET
+============================================================ */
+
+@media (max-width: 880px) {
+    .address-hero-grid {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding: 48px 0 76px;
+    }
+
+    .address-hero-copy {
+        max-width: 720px;
+    }
+
+    .address-hero-visual {
+        display: none;
+    }
+
+    .address-main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .address-main-card {
+        min-height: 370px;
+    }
+
+    .address-contact-column {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .address-contact-card {
+        display: flex;
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        min-height: 185px;
+    }
+
+    .address-section-heading {
+        align-items: flex-start;
+    }
+
+    .address-closing-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .address-closing-actions {
+        width: 100%;
+    }
+}
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media (max-width: 700px) {
+    .address-breadcrumb {
+        padding-top: 20px;
+
+        font-size: 9px;
+    }
+
+    .address-hero-grid {
+        padding: 40px 0 66px;
+    }
+
+    .address-hero-copy h1 {
+        font-size: clamp(37px, 11vw, 49px);
+    }
+
+    .address-hero-description {
+        font-size: 12px;
+    }
+
+    .address-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .address-button {
+        width: 100%;
+
+        min-height: 50px;
+    }
+
+    .address-hero-meta {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .address-content-section {
+        padding: 67px 0 62px;
+    }
+
+    .address-section-heading {
+        flex-direction: column;
+
+        margin-bottom: 24px;
+    }
+
+    .address-update-badge {
+        width: 100%;
+    }
+
+    .address-main-card {
+        min-height: 340px;
+
+        padding: 25px 22px;
+
+        border-radius: 20px;
+    }
+
+    .address-main-card-body {
+        padding: 38px 0;
+    }
+
+    .address-location-text {
+        font-size: 19px;
+    }
+
+    .address-contact-column {
+        grid-template-columns: 1fr;
+    }
+
+    .address-contact-card {
+        display: grid;
+
+        grid-template-columns:
+            48px minmax(0, 1fr);
+
+        min-height: 115px;
+
+        padding: 19px;
+    }
+
+    .address-connect-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .address-connect-intro {
+        grid-column: auto;
+    }
+
+    .address-connect-item,
+    .address-connect-placeholder {
+        min-height: 90px;
+
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+
+    .address-empty-state {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 25px;
+    }
+
+    .address-closing-section {
+        padding-bottom: 60px;
+    }
+
+    .address-closing-card {
+        padding: 30px 24px;
+
+        border-radius: 20px;
+    }
+
+    .address-closing-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
+
+/* ============================================================
+   EXTRA SMALL
+============================================================ */
+
+@media (max-width: 480px) {
+    .address-eyebrow {
+        font-size: 8px;
+    }
+
+    .address-hero-copy h1 {
+        font-size: 37px;
+    }
+
+    .address-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .address-main-card-header {
+        align-items: flex-start;
+    }
+
+    .address-main-card-header h3 {
+        font-size: 15px;
+    }
+
+    .address-location-text {
+        font-size: 17px;
+    }
+
+    .address-direction-button {
+        min-height: 52px;
+    }
+
+    .address-contact-card {
+        grid-template-columns:
+            43px minmax(0, 1fr);
+
+        gap: 13px;
+    }
+
+    .address-contact-icon {
+        width: 43px;
+        height: 43px;
+
+        border-radius: 13px;
+    }
+}
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .address-page *,
+    .address-page *::before,
+    .address-page *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+    .address-button:hover,
+    .address-contact-card:hover,
+    .address-direction-button:hover {
+        transform: none;
+    }
+}
+
+/* ============================================================
+   OVERRIDE ALAMAT LENGKAP
+   ============================================================ */
+
+.address-main-card-body {
+    justify-content: flex-start !important;
+    padding: 25px 0 20px !important;
+}
+
+.address-field-label {
+    margin-bottom: 8px !important;
+}
+
+.address-location-text {
+    line-height: 1.4 !important;
+}
+
+
+/* ============================================================
+   OVERRIDE CONNECT SOCIAL CARD
+   ============================================================ */
+
+.address-connect-strip {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 18px !important;
+
+    margin-top: 35px !important;
+
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+.address-connect-intro {
+    grid-column: 1 / -1 !important;
+
+    min-height: auto !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+}
+
+
+.address-connect-item {
+    min-height: 130px !important;
+
+    display: flex !important;
+    align-items: center !important;
+
+    gap: 15px !important;
+
+    padding: 25px !important;
+
+    border: 1px solid #e6edf5 !important;
+    border-radius: 20px !important;
+
+    background: #ffffff !important;
+
+    box-shadow: 0 10px 30px rgba(8, 42, 91, .06) !important;
+
+    transition: .25s ease !important;
+}
+
+
+.address-connect-item:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 15px 35px rgba(8, 42, 91, .12) !important;
+}
+
+
+.address-connect-icon {
+    width: 48px !important;
+    height: 48px !important;
+
+    border-radius: 14px !important;
+}
+
+
+.address-connect-item strong {
+    font-size: 14px !important;
+}
+
+
+.address-connect-item small {
+    font-size: 11px !important;
+}
+
+
+/* Responsive */
+
+@media(max-width:880px) {
+
+    .address-connect-strip {
+        grid-template-columns: 1fr !important;
+    }
+
+}
+
+/* Hilangkan seluruh area footer jika maps belum tersedia */
+.address-main-card-footer:has(.address-map-unavailable) {
+    display: none !important;
+}
+
+
+/* Rapikan jarak alamat */
+.address-main-card-body {
+    flex: unset !important;
+    padding: 20px 0 10px !important;
+}

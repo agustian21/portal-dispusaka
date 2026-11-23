@@ -1,0 +1,958 @@
+/* =========================================================
+ PREMIUM ORGANIZATION PAGE
+ Modern Institutional Style
+ HERO NOT TOUCHED
+========================================================= */
+
+
+/* =========================================================
+ STATISTICS SECTION
+========================================================= */
+
+.org-stat-section {
+
+    padding: 90px 0;
+
+    background: #ffffff;
+
+}
+
+
+.org-stat-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.stat-card {
+
+    position: relative;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 22px;
+
+    border: 1px solid #e8eef6;
+
+    overflow: hidden;
+
+    text-align: left;
+
+    transition: .35s ease;
+
+}
+
+
+
+.stat-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 140px;
+
+    height: 140px;
+
+    right: -60px;
+
+    top: -60px;
+
+    background: #f3b61f;
+
+    opacity: .08;
+
+    border-radius: 50%;
+
+}
+
+
+
+.stat-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+
+        0 30px 70px rgba(8, 42, 91, .12);
+
+}
+
+
+
+.stat-card i {
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #edf5ff;
+
+    color: #155fb4;
+
+    border-radius: 16px;
+
+    font-size: 25px;
+
+}
+
+
+
+.stat-card h3 {
+
+    margin-top: 25px;
+
+    font-size: 46px;
+
+    font-weight: 800;
+
+    color: #082a5b;
+
+}
+
+
+
+.stat-card p {
+
+    color: #64748b;
+
+    font-size: 14px;
+
+}
+
+
+
+
+
+/* =========================================================
+ STRUCTURE SECTION
+========================================================= */
+
+
+.structure-area {
+
+    padding: 110px 0;
+
+    background: #f8fafc;
+
+}
+
+
+
+/* HEADER */
+
+.org-structure-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 40px;
+
+    margin-bottom: 45px;
+
+}
+
+
+
+.org-structure-heading {
+
+    max-width: 780px;
+
+}
+
+
+
+.org-structure-kicker {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.org-kicker-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    background: #f3b61f;
+
+    border-radius: 50%;
+
+}
+
+
+
+.org-structure-kicker span:last-child {
+
+    color: #155fb4;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+}
+
+
+
+.org-structure-heading h2 {
+
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    color: #082a5b;
+
+    margin: 0 0 20px;
+
+}
+
+
+
+.org-structure-heading p {
+
+    font-size: 17px;
+
+    color: #66768b;
+
+    line-height: 1.8;
+
+}
+
+
+
+.org-structure-focus {
+
+    background: #ffffff;
+
+    border: 1px solid #e5edf7;
+
+    padding: 18px 22px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-width: 260px;
+
+}
+
+
+
+.org-structure-focus-icon {
+
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #edf5ff;
+
+    color: #155fb4;
+
+    border-radius: 15px;
+
+}
+
+
+
+.org-structure-focus-text span {
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    color: #94a3b8;
+
+}
+
+
+
+.org-structure-focus-text strong {
+
+    color: #082a5b;
+
+    font-size: 16px;
+
+}
+
+
+
+
+
+/* =========================================================
+ BLUE STRUCTURE FEATURE CARD
+========================================================= */
+
+
+.org-structure-highlight {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        linear-gradient(135deg,
+            #082b63,
+            #154f91);
+
+    padding: 45px;
+
+    border-radius: 34px;
+
+    margin-bottom: 40px;
+
+    box-shadow:
+
+        0 35px 80px rgba(8, 42, 91, .18);
+
+}
+
+
+
+.org-structure-highlight-icon {
+
+    width: 72px;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background:
+
+        rgba(255, 255, 255, .1);
+
+    border:
+
+        1px solid rgba(255, 255, 255, .15);
+
+    color: #f3b61f;
+
+    font-size: 30px;
+
+    margin-bottom: 30px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.org-structure-highlight-label {
+
+    color: #f3b61f;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: .12em;
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.org-structure-highlight h3 {
+
+    max-width: 900px;
+
+    font-size: 44px;
+
+    line-height: 1.2;
+
+    font-weight: 800;
+
+    color: white;
+
+    margin: 0;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.org-structure-divider {
+
+    width: 120px;
+
+    height: 4px;
+
+    background: #f3b61f;
+
+    border-radius: 50px;
+
+    margin: 30px 0;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.org-structure-highlight-text {
+
+    max-width: 900px;
+
+    color: rgba(255, 255, 255, .9);
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+
+.org-structure-highlight-number {
+
+    position: absolute;
+
+    right: 35px;
+
+    top: 20px;
+
+    color: rgba(255, 255, 255, .12);
+
+    font-size: 100px;
+
+    font-weight: 900;
+
+}
+
+
+
+.org-structure-highlight-circle {
+
+    position: absolute;
+
+    width: 380px;
+
+    height: 380px;
+
+    right: -130px;
+
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, .1);
+
+}
+
+
+
+
+
+/* =========================================================
+ IMAGE VIEWER
+========================================================= */
+
+
+.structure-viewer {
+
+    background: white;
+
+    padding: 50px;
+
+    border-radius: 35px;
+
+    border: 1px solid #e7edf5;
+
+    box-shadow:
+
+        0 35px 90px rgba(8, 42, 91, .08);
+
+}
+
+
+
+.structure-image {
+
+    width: 100%;
+
+    max-height: 750px;
+
+    object-fit: contain;
+
+    cursor: pointer;
+
+    border-radius: 20px;
+
+    transition: .35s;
+
+}
+
+
+
+.structure-image:hover {
+
+    transform: scale(1.015);
+
+}
+
+
+
+.zoom-info {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    background: #f1f5f9;
+
+    padding: 12px 22px;
+
+    border-radius: 50px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+
+
+
+
+
+/* =========================================================
+ UNIT ORGANIZATION
+========================================================= */
+
+
+.unit-section {
+
+    padding: 110px 0;
+
+    background: white;
+
+}
+
+
+
+.unit-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.unit-card {
+
+    background:
+
+        linear-gradient(180deg,
+            #ffffff,
+            #f8fafc);
+
+    padding: 40px 32px;
+
+    border-radius: 25px;
+
+    border: 1px solid #e7edf5;
+
+    transition: .35s;
+
+}
+
+
+
+.unit-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow:
+
+        0 30px 70px rgba(8, 42, 91, .1);
+
+}
+
+
+
+.unit-card i {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #fff8df;
+
+    color: #f3b61f;
+
+    border-radius: 18px;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.unit-card h3 {
+
+    color: #082a5b;
+
+}
+
+
+
+.unit-card p {
+
+    color: #64748b;
+
+    line-height: 1.8;
+
+}
+
+
+
+
+
+/* =========================================================
+ EMPTY
+========================================================= */
+
+
+.structure-empty {
+
+    background: white;
+
+    padding: 90px 30px;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    border: 1px dashed #ccd8e8;
+
+}
+
+
+
+
+
+/* =========================================================
+ MODAL
+========================================================= */
+
+
+.structure-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+        rgba(2, 12, 25, .94);
+
+    backdrop-filter: blur(12px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: .3s;
+
+}
+
+
+
+.structure-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+
+.image-container {
+
+    width: 100%;
+
+    height: 90vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+
+.structure-modal-image {
+
+    max-width: none;
+
+    max-height: none;
+
+    border-radius: 20px;
+
+    cursor: grab;
+
+    box-shadow:
+
+        0 40px 120px rgba(0, 0, 0, .5);
+
+}
+
+
+
+.viewer-toolbar {
+
+    position: absolute;
+
+    top: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+
+.viewer-toolbar button {
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #082a5b;
+
+    cursor: pointer;
+
+}
+
+
+
+.viewer-toolbar button:hover {
+
+    background: #f3b61f;
+
+    color: white;
+
+}
+
+
+
+.structure-close {
+
+    position: absolute;
+
+    right: 40px;
+
+    top: 20px;
+
+    font-size: 55px;
+
+    color: white;
+
+}
+
+
+
+
+
+/* =========================================================
+ RESPONSIVE
+========================================================= */
+
+
+@media(max-width:1200px) {
+
+
+    .org-stat-grid,
+
+    .unit-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px) {
+
+
+    .org-stat-grid,
+
+    .unit-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .org-structure-top {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+
+    .org-structure-heading h2 {
+
+        font-size: 34px;
+
+    }
+
+
+
+    .org-structure-highlight {
+
+        padding: 30px 25px;
+
+        border-radius: 25px;
+
+    }
+
+
+
+    .org-structure-highlight h3 {
+
+        font-size: 28px;
+
+    }
+
+
+
+    .org-structure-highlight-text {
+
+        font-size: 16px;
+
+    }
+
+
+
+    .structure-viewer {
+
+        padding: 20px;
+
+    }
+
+
+
+    .structure-close {
+
+        right: 20px;
+
+        font-size: 40px;
+
+    }
+
+}
